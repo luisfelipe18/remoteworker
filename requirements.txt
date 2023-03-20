@@ -1,0 +1,5 @@
+imageio
+pywin32
+ahk
+pytesseract
+ahk[binary]
