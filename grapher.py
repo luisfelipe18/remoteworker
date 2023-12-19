@@ -13,6 +13,8 @@ k = 1.65
 x0 = 0
 x = np.linspace(-2.5, 2.5, 100)
 y = logistic(x, L, k, x0)
+y2 = logistic(x, 0.99, 1.61, x0)
+y3 = logistic(x, 0.95, 1.67, x0)
 
 # Add random noise
 e = 0.01*np.random.randn(len(x))
@@ -52,9 +54,9 @@ for i in range(len(x)):
 
 
 
-y_noisy = y + e
-y_noisy_2 = y + f
-y_noisy_3 =  y + g
+y_noisy = y3 + 0.5*e
+y_noisy_2 = y2 + 0.4*f
+y_noisy_3 =  y2 + 0.5*g
 
 # Plot  
 fig, ax = plt.subplots(figsize=(15, 8))
